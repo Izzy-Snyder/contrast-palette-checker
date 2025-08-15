@@ -3,7 +3,7 @@ from pathlib import Path
 
 themes = {"light":"lighter", "dark-contrast":"darker"} #input themes as a dictionary where the key is the theme name and the value is the main background color of the theme
 paletteFile = "_variables.scss" #file name for color palette
-randomColors = False #use unnamed colors that appear in themes
+unnamedColors = True #use unnamed colors that appear in themes
 dir = "" #input directory to place output files inside. Leave blank to use current working directory
 
 if (dir == ""):
@@ -107,11 +107,10 @@ def colorPaletteCheck(colors,bgcolors):
             con = contrast(color1,color2)
             smallTextDict = {"hex":color2,"name":colorDict[color2],"RGB":str(hexToRGB(color2.strip("#"))),"contrast":(str(con) + ":1")}
             largeTextUIDict = {"hex":color2,"name":colorDict[color2],"RGB":str(hexToRGB(color2.strip("#"))),"contrast":(str(con) + ":1")}
-            s = [color2, colorDict[color2],  str(hexToRGB(color2.strip("#"))), (str(con) + ":1")]
             if con>4.5:
                 smallText.append(smallTextDict)
             if con>3:
-                largeTextUI.append(smallTextDict)
+                largeTextUI.append(largeTextUIDict)
         smallText = sorted(smallText, key=compare_key)
         largeTextUI = sorted(largeTextUI, key=compare_key)
         newContrastSet = ContrastSet(smallText,largeTextUI,colorDict[color1],color1)
@@ -123,58 +122,61 @@ def colorPaletteCheck(colors,bgcolors):
 #contrasts: dictionary of contrasts, 
 # bg1/2: color of the main and secondary bg color, 
 # Theme: name of theme, 
-# outfile: name of output file. 
+# outFileTxt: name of output text file. 
+# outFileMD: name of output markdown file
 #small: boolean for whether to use large text or small text contrast sets
 #sub: boolean for whether it's a sub-palette or not (text on button colors)
-def makeTextFile(contrasts, bg1, bg2, theme, outFile,small, sub=False):
+def makeTextFiles(contrasts, bg1, bg2, theme, outFileTxt, outFileMD, small, sub=False):
+    write = True
+    #if the color is one of the random theme-specific ones
+    if "(" in contrasts[bg1].name:
+        #get the theme from its name
+        colorTheme = (contrasts[bg1].name[contrasts[bg1].name.index("(")+1:contrasts[bg1].name.index(")")])
+        #if it's not in this theme, don't write it to the file
+        if not(colorTheme in theme):
+            write = False
+    
     c = contrasts[bg1]
-    
-    #get contrast of the UI element with the background
-    buttonContrast = ""
-    for l in contrasts[bg2].large:
-        if(l["name"]) == bg1:
-            buttonContrast = (l["contrast"])
+    if write:
+        #get contrast of the UI element with the background
+        buttonContrast = ""
+        for l in contrasts[bg2].large:
+            if(l["name"]) == bg1:
+                buttonContrast = (l["contrast"])
 
-    #write starting line for the given foreground/background
-    if sub:
-        outFile.write("start "  + theme + " " + contrasts[bg2].name + " " + contrasts[bg2].hex + " " + contrasts[bg2].RGBstr + " sub" + "\n")
-        outFile.write(contrasts[bg1].name + " " + contrasts[bg1].hex + " "  + contrasts[bg1].RGBstr + " " + buttonContrast +"\n")
-    else:
-        outFile.write("start "  + theme + " " +  contrasts[bg2].name + " " + contrasts[bg2].hex  + " " + contrasts[bg2].RGBstr + " " + "\n")
+        #write starting line for the given foreground/background
+        if sub:
+            outFileTxt.write("start "  + theme + " " + contrasts[bg2].name + " " + contrasts[bg2].hex + " " + contrasts[bg2].RGBstr + " sub" + "\n")
+            outFileTxt.write(contrasts[bg1].name + " " + contrasts[bg1].hex + " "  + contrasts[bg1].RGBstr + " " + buttonContrast +"\n")
+            outFileMD.write("## UI component color: "  + contrasts[bg1].name + " (" + contrasts[bg1].hex + ")\n")
+        else:
+            outFileTxt.write("start "  + theme + " " +  contrasts[bg2].name + " " + contrasts[bg2].hex  + " " + contrasts[bg2].RGBstr + " " + "\n")
+            outFileMD.write("# Theme: "  + theme + "\n\n")
+            outFileMD.write("## UI or large text colors: \n")
 
-    #determine whether to use small or large text contrast set
-    if small:
-        colorList = c.small
-    else:
-        colorList = c.large
+        #determine whether to use small or large text contrast set
+        if small:
+            colorList = c.small
+        else:
+            colorList = c.large
 
-    #write out the information on each color
-    for s in colorList:
-        outFile.write(s["name"] + " " + str(s["hex"]) + " " +  str(s["RGB"]).translate({ord(i): None for i in '[],'}) + " " + str(s["contrast"])+ "\n")
-    
-    #write final line
-    outFile.write("end\n\n")
+        #write out the information on each color
+        for s in colorList:
+            #do a similar check for the individual colors (earlier was for UI elements)
+            if "(" in s["name"]:
+                colorTheme = (s["name"][s["name"].index("(")+1:s["name"].index(")")])
+                if (colorTheme in theme):
+                    outFileTxt.write(s["name"] + " " + str(s["hex"]) + " " +  str(s["RGB"]).translate({ord(i): None for i in '[],'}) + " " + str(s["contrast"])+ "\n")
+                    outFileMD.write( "* " + s["name"] + " (" + str(s["hex"]) + ") " + str(s["RGB"]) +  " contrast: " + str(s["contrast"])+ "\n")
+            else:
+                outFileTxt.write(s["name"] + " " + str(s["hex"]) + " " +  str(s["RGB"]).translate({ord(i): None for i in '[],'}) + " " + str(s["contrast"])+ "\n")
+                outFileMD.write( "* " + s["name"] + " (" + str(s["hex"]) + ") " + str(s["RGB"]) +  " contrast: " + str(s["contrast"])+ "\n")
 
-#writes to a markdown file that lists out the color information in text form
-def makeMDFile(contrasts, bg1, bg2, theme, outFile,small, sub=False):
-    c = contrasts[bg1]
+        #write final line
+        outFileTxt.write("end\n\n")
+        outFileMD.write("\n")
 
-    
-    if sub:
-        outFile.write("## UI component color: "  + contrasts[bg1].name + " (" + contrasts[bg1].hex + ")\n")
-    else:
-        outFile.write("# Theme: "  + theme + "\n\n")
-        outFile.write("## UI or large text colors: \n")
 
-    if small:
-        colorList = c.small
-    else:
-        colorList = c.large
-
-    for s in colorList:
-        outFile.write( "* " + s["name"] + " (" + str(s["hex"]) + ")" + str(s["RGB"]) +  " contrast: " + str(s["contrast"])+ "\n")
-
-    outFile.write("\n")
 
 #main function reads in palette file, creates data structure of contrasts, outputs to a file
 #assumes an input file of scss variables where hex codes are indicated with a # and variables are indicated with a $
@@ -184,6 +186,10 @@ def main():
     f = open(paletteFile,"r")
     file = (f.readlines())
     palette = {}
+    name = False
+    color = False
+    suffix = ""
+
 
     #iterate through file and add characters to color names and color hex values
     for line in file:
@@ -191,9 +197,13 @@ def main():
         colorHex = ""
         #always check if line contains hex. 
         # If random colors is set to true, no need for line to start with a $ for a variable
-        if "#" in line and (line[0] == "$" or (randomColors)):
+        if  ": (" in line and "$" not in line:
+            suffix = "-(" + line.strip(": (\n") + ")"
+        
+        if "#" in line and (line[0] == "$" or (unnamedColors)):
             name = True
             color = False
+            
             #add things to either the color name or the color hex depending on surrounding characters
             for char in line:
                 if (char != ":" and name):
@@ -209,7 +219,9 @@ def main():
             if (len(colorHex)<7):
                 colorHex = colorHex + colorHex[2:] 
             #take out extra characters from the name and hex
-            colorName = colorName.strip("$  / ")
+            colorName = colorName.strip("$  / ()")
+            if unnamedColors and not line[0] == "$":
+                colorName = colorName + suffix
             colorHex = colorHex.strip(",\n ").upper()
             
             #this excludes opacity colors (I have not implemented alpha compositing)
@@ -217,9 +229,7 @@ def main():
                 palette [colorHex] = colorName
 
     #generate a reference dictionary of every color's contrast with every other color
-    contrasts = colorPaletteCheck(palette,palette)
-    print(contrasts)
-    
+    contrasts = colorPaletteCheck(palette,palette)    
 
     #opens an output file
     outFileText = open(Path(dir).joinpath("contrasts.txt"), "w")
@@ -237,11 +247,9 @@ def main():
 
     #add all theme contrasts to the output files
     for theme in allThemeContrasts:
-        makeTextFile(contrasts,themes[theme], themes[theme], theme, outFileText, False, False) 
-        makeMDFile(contrasts,themes[theme], themes[theme], theme, outFileMDDict[theme], False, False)
+        makeTextFiles(contrasts,themes[theme], themes[theme], theme, outFileText, outFileMDDict[theme], False, False) 
         for subColor in allThemeContrasts[theme]:
-            makeTextFile(contrasts,subColor["name"], themes[theme], theme, outFileText, False, True) 
-            makeMDFile(contrasts,subColor["name"], themes[theme], theme, outFileMDDict[theme], False, True)
+            makeTextFiles(contrasts,subColor["name"], themes[theme], theme, outFileText, outFileMDDict[theme], False, True) 
 
 
 #define a contrast set class   
