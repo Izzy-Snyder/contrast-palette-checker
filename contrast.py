@@ -1,9 +1,8 @@
 from functools import cmp_to_key
 
-lightbg = "lighter" #color name of light theme bg
-darkbg = "darker" #color name of dark theme bg
+themes = {"light":"lighter", "dark-contrast":"darker"} #input themes as a dictionary where the key is the theme name and the value is the main background color of the theme
 paletteFile = "_variables.scss" #file name for color palette
-randomColors = True #use unnamed colors that appear in themes
+randomColors = False #use unnamed colors that appear in themes
 
 
 #hex digit to int converts hex digit to base 10 int
@@ -211,36 +210,26 @@ def main():
 
     #opens an output file
     outFileText = open("contrasts.txt", "w")
-    outFileMDLight = open("pallete_contrasts_light.md", "w")
-    outFileMDDark = open("pallete_contrasts_dark.md", "w")
-    #breaks contrast into two lists for light and dark bg contrasts
-    lightContrasts = []
-    for c in contrasts[lightbg].large:
-        lightContrasts.append(c[1])
-
-    darkContrasts = []
-    for c in contrasts[darkbg].large:
-        darkContrasts.append(c[1])
-
-    #add light and dark full palette contrasts to the palette output file
-    makeTextFile(contrasts,lightbg, lightbg, "light", outFileText, False, False)     
-    makeTextFile(contrasts,darkbg, darkbg, "dark", outFileText, False, False)
-
-    #add light and dark full palette contrasts to the MD output file
-    makeMDFile(contrasts,lightbg, lightbg, "light", outFileMDLight, False, False)     
-    makeMDFile(contrasts,darkbg, darkbg, "dark", outFileMDDark, False, False)
+    outFileMDDict = {}
     
-    #add all the sub-palette contrasts to the output file
-    for subColor in contrasts.keys():
-        if subColor in lightContrasts:
-            makeTextFile(contrasts,subColor,lightbg, "light", outFileText, False, True)
-            makeMDFile(contrasts,subColor,lightbg, "light", outFileMDLight, False, True)     
+    #makes a dictionary for the contrasts of each theme
+    allThemeContrasts = {}
+    for themeName in themes.keys():
+        bg = themes[themeName]
+        allThemeContrasts[themeName] = contrasts[bg].large
+        fileThemeName = themeName.replace("/","_")
+        s = "palette-contrasts-" + fileThemeName + ".md"
+        f = open(s, "w")
+        outFileMDDict[themeName] = f
 
-        if subColor in darkContrasts:
-            makeTextFile(contrasts,subColor,darkbg, "dark/contrast", outFileText, False, True)     
-            makeMDFile(contrasts,subColor,darkbg, "dark/contrast", outFileMDDark, False, True)     
-
-
+    #add all theme contrasts to the output files
+    for theme in allThemeContrasts:
+        makeTextFile(contrasts,themes[theme], themes[theme], theme, outFileText, False, False) 
+        makeMDFile(contrasts,themes[theme], themes[theme], theme, outFileMDDict[theme], False, False)
+        for subColor in allThemeContrasts[theme]:
+            print(subColor[1])
+            makeTextFile(contrasts,subColor[1], themes[theme], theme, outFileText, False, True) 
+            makeMDFile(contrasts,subColor[1], themes[theme], theme, outFileMDDict[theme], False, True)
 
 #define a contrast set class   
 class ContrastSet():
