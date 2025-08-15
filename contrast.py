@@ -68,8 +68,8 @@ def contrast (hex1, hex2):
     
 #comparitor for sorting color items by contrast
 def contrastSort(a, b):
-    con1 = float(a[3].partition(":")[0])
-    con2 = float(b[3].partition(":")[0])
+    con1 = float(a["contrast"].partition(":")[0])
+    con2 = float(b["contrast"].partition(":")[0])
     if con1 > con2:
         return -1
     elif con1 == con2:
@@ -96,11 +96,13 @@ def colorPaletteCheck(colors,bgcolors):
         largeTextUI = []
         for color2 in colors:
             con = contrast(color1,color2)
+            smallTextDict = {"hex":color2,"name":colorDict[color2],"RGB":str(hexToRGB(color2.strip("#"))),"contrast":(str(con) + ":1")}
+            largeTextUIDict = {"hex":color2,"name":colorDict[color2],"RGB":str(hexToRGB(color2.strip("#"))),"contrast":(str(con) + ":1")}
             s = [color2, colorDict[color2],  str(hexToRGB(color2.strip("#"))), (str(con) + ":1")]
             if con>4.5:
-                smallText.append(s)
+                smallText.append(smallTextDict)
             if con>3:
-                largeTextUI.append(s)
+                largeTextUI.append(smallTextDict)
         smallText = sorted(smallText, key=compare_key)
         largeTextUI = sorted(largeTextUI, key=compare_key)
         newContrastSet = ContrastSet(smallText,largeTextUI,colorDict[color1],color1)
@@ -121,8 +123,8 @@ def makeTextFile(contrasts, bg1, bg2, theme, outFile,small, sub=False):
     #get contrast of the UI element with the background
     buttonContrast = ""
     for l in contrasts[bg2].large:
-        if(l[1]) == bg1:
-            buttonContrast = (l[3])
+        if(l["name"]) == bg1:
+            buttonContrast = (l["contrast"])
 
     #write starting line for the given foreground/background
     if sub:
@@ -139,7 +141,7 @@ def makeTextFile(contrasts, bg1, bg2, theme, outFile,small, sub=False):
 
     #write out the information on each color
     for s in colorList:
-        outFile.write(s[1] + " " + str(s[0]) + " " +  str(s[2]).translate({ord(i): None for i in '[],'}) + " " + str(s[3])+ "\n")
+        outFile.write(s["name"] + " " + str(s["hex"]) + " " +  str(s["RGB"]).translate({ord(i): None for i in '[],'}) + " " + str(s["contrast"])+ "\n")
     
     #write final line
     outFile.write("end\n\n")
@@ -161,7 +163,7 @@ def makeMDFile(contrasts, bg1, bg2, theme, outFile,small, sub=False):
         colorList = c.large
 
     for s in colorList:
-        outFile.write( "* " + s[1] + " (" + str(s[0]) + ")" + str(s[2]) +  " contrast: " + str(s[3])+ "\n")
+        outFile.write( "* " + s["name"] + " (" + str(s["hex"]) + ")" + str(s["RGB"]) +  " contrast: " + str(s["contrast"])+ "\n")
 
     outFile.write("\n")
 
@@ -207,6 +209,8 @@ def main():
 
     #generate a reference dictionary of every color's contrast with every other color
     contrasts = colorPaletteCheck(palette,palette)
+    print(contrasts)
+    
 
     #opens an output file
     outFileText = open("contrasts.txt", "w")
@@ -227,9 +231,9 @@ def main():
         makeTextFile(contrasts,themes[theme], themes[theme], theme, outFileText, False, False) 
         makeMDFile(contrasts,themes[theme], themes[theme], theme, outFileMDDict[theme], False, False)
         for subColor in allThemeContrasts[theme]:
-            print(subColor[1])
-            makeTextFile(contrasts,subColor[1], themes[theme], theme, outFileText, False, True) 
-            makeMDFile(contrasts,subColor[1], themes[theme], theme, outFileMDDict[theme], False, True)
+            makeTextFile(contrasts,subColor["name"], themes[theme], theme, outFileText, False, True) 
+            makeMDFile(contrasts,subColor["name"], themes[theme], theme, outFileMDDict[theme], False, True)
+
 
 #define a contrast set class   
 class ContrastSet():
