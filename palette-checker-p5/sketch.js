@@ -1,11 +1,9 @@
-//to get contrast file, 
-
 //adjustable variables
 let rectSize = 125; //size of squares in output
 let rowLength = 4; //squares per row
 let textsz = 16; //size of the text
 let padding = textsz; //padding around edges
-let readyToSave = true;
+let readyToSave = false; //set to true when you are ready to download everything (could be a lot of files)
 
 //instantiating global variables
 let contrasts;
