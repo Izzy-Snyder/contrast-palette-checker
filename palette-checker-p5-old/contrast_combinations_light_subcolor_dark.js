@@ -1,0 +1,86 @@
+bgcolor = [251, 251, 251]
+rectColor = [51, 51, 51]
+white = [255, 255, 255];
+lightest = [255, 255, 255];
+lighter = [251, 251, 251];
+light = [240, 240, 240];
+yellow = [245, 220, 35];
+mediumlight = [217, 217, 217];
+p5contrastpink = [255, 169, 217];
+middlelight = [166, 166, 166];
+outlinecolor = [15, 157, 215];
+dodgerblue = [30, 144, 255];
+
+function setup() {
+	createCanvas (560, 252.5);
+	background (bgcolor);
+	textAlign(CENTER);
+	textSize(12.0);
+	fill (rectColor);
+	rect (10.0, 10.0, 100);
+	fill (white);
+	text('white', 60.0, 43.333333333333336)
+	text('#ffffff', 60.0, 60.0)
+	text('12.6:1', 60.0, 76.66666666666667)
+	fill (rectColor);
+	rect (120.0, 10.0, 100);
+	fill (lightest);
+	text('lightest', 170.0, 43.333333333333336)
+	text('#FFFFFF', 170.0, 60.0)
+	text('12.6:1', 170.0, 76.66666666666667)
+	fill (rectColor);
+	rect (230.0, 10.0, 100);
+	fill (lighter);
+	text('lighter', 280.0, 43.333333333333336)
+	text('#FBFBFB', 280.0, 60.0)
+	text('12.2:1', 280.0, 76.66666666666667)
+	fill (rectColor);
+	rect (340.0, 10.0, 100);
+	fill (light);
+	text('light', 390.0, 43.333333333333336)
+	text('#F0F0F0', 390.0, 60.0)
+	text('11.1:1', 390.0, 76.66666666666667)
+	fill (rectColor);
+	rect (450.0, 10.0, 100);
+	fill (yellow);
+	text('yellow', 500.0, 43.333333333333336)
+	text('#F5DC23', 500.0, 60.0)
+	text('9.1:1', 500.0, 76.66666666666667)
+	fill (rectColor);
+	rect (10.0, 120.0, 100);
+	fill (mediumlight);
+	text('medium-light', 60.0, 153.33333333333334)
+	text('#D9D9D9', 60.0, 170.0)
+	text('9.0:1', 60.0, 186.66666666666669)
+	fill (rectColor);
+	rect (120.0, 120.0, 100);
+	fill (p5contrastpink);
+	text('p5-contrast-pink', 170.0, 153.33333333333334)
+	text('#FFA9D9', 170.0, 170.0)
+	text('7.2:1', 170.0, 186.66666666666669)
+	fill (rectColor);
+	rect (230.0, 120.0, 100);
+	fill (middlelight);
+	text('middle-light', 280.0, 153.33333333333334)
+	text('#A6A6A6', 280.0, 170.0)
+	text('5.2:1', 280.0, 186.66666666666669)
+	fill (rectColor);
+	rect (340.0, 120.0, 100);
+	fill (outlinecolor);
+	text('outline-color', 390.0, 153.33333333333334)
+	text('#0F9DD7', 390.0, 170.0)
+	text('4.1:1', 390.0, 186.66666666666669)
+	fill (rectColor);
+	rect (450.0, 120.0, 100);
+	fill (dodgerblue);
+	text('dodgerblue', 500.0, 153.33333333333334)
+	text('#1E90FF', 500.0, 170.0)
+	text('3.9:1', 500.0, 186.66666666666669)
+	fill (rectColor);
+	textAlign(LEFT);
+	textSize(10.666666666666666);
+	text('background: lighter, #FBFBFB', 10.0, 247.5)
+	text('UI element color: dark, #333333', 10.0, 235.0)
+	saveCanvas('contrast_combinations_light_subcolor_dark')
+}
+
