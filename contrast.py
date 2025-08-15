@@ -222,9 +222,13 @@ def main():
     for c in contrasts[darkbg].large:
         darkContrasts.append(c[1])
 
-    #add light and dark full palette contrasts to the output file
+    #add light and dark full palette contrasts to the palette output file
     makeTextFile(contrasts,lightbg, lightbg, "light", outFileText, False, False)     
-    makeTextFile(contrasts,darkbg, darkbg, "dark", outFileText, False, False)     
+    makeTextFile(contrasts,darkbg, darkbg, "dark", outFileText, False, False)
+
+    #add light and dark full palette contrasts to the MD output file
+    makeMDFile(contrasts,lightbg, lightbg, "light", outMDLight, False, False)     
+    makeMDFile(contrasts,darkbg, darkbg, "dark", outMDDark, False, False)
     
     #add all the sub-palette contrasts to the output file
     for subColor in contrasts.keys():
