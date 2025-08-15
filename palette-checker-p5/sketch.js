@@ -5,10 +5,7 @@ let rectSize = 125; //size of squares in output
 let rowLength = 4; //squares per row
 let textsz = 16; //size of the text
 let padding = textsz; //padding around edges
-<<<<<<< HEAD
 let readyToSave = true;
-=======
->>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
 
 //instantiating global variables
 let contrasts;
@@ -135,7 +132,6 @@ function setup() {
       }
       
       //save canvas with appropriate name
-<<<<<<< HEAD
       if(sub && readyToSave){
           saveCanvas(`${theme}-theme-${buttonName}-UI-Elements-text-combinations`)
       }
@@ -144,14 +140,6 @@ function setup() {
         if(readyToSave) {
           saveCanvas(`${theme}-theme`)
         }
-=======
-      if(sub){
-          //saveCanvas(`${theme}-theme-${buttonName}-UI-Elements-text-combinations`)
-      }
-      
-      else{
-        //saveCanvas(`${theme}-theme`)
->>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
       }
       
     }
@@ -172,7 +160,6 @@ function setup() {
       rectCount = 0; //reset rect count to 0
       sub = myStrArr[7]; //check if it's a sub-palette
       theme = myStrArr[1]; //get theme form line of file
-<<<<<<< HEAD
       themeList = (splitTokens(myStrArr[1],"-"));
         theme = '';
         for (k = 0; k<themeList.length; k++){
@@ -182,8 +169,6 @@ function setup() {
               theme += `${themeList[k]}`;
             }
           }
-=======
->>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
 
       //if it is a sub-palette  
       if (sub){
