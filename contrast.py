@@ -1,9 +1,18 @@
 from functools import cmp_to_key
+from pathlib import Path
 
 themes = {"light":"lighter", "dark-contrast":"darker"} #input themes as a dictionary where the key is the theme name and the value is the main background color of the theme
 paletteFile = "_variables.scss" #file name for color palette
 randomColors = False #use unnamed colors that appear in themes
+dir = "" #input directory to place output files inside. Leave blank to use current working directory
 
+if (dir == ""):
+    dir = Path.cwd() 
+else:
+    if not (Path(Path.cwd().joinpath(dir)).exists()):
+        dir = Path.cwd().joinpath(dir).mkdir()
+    else:
+        dir = Path.cwd().joinpath(dir)
 
 #hex digit to int converts hex digit to base 10 int
 def hexDigitToInt(digit):
@@ -170,7 +179,7 @@ def makeMDFile(contrasts, bg1, bg2, theme, outFile,small, sub=False):
 #main function reads in palette file, creates data structure of contrasts, outputs to a file
 #assumes an input file of scss variables where hex codes are indicated with a # and variables are indicated with a $
 def main():
-
+    
     #open the file, initialize a dictonary to store the variable names and hex values
     f = open(paletteFile,"r")
     file = (f.readlines())
@@ -213,7 +222,7 @@ def main():
     
 
     #opens an output file
-    outFileText = open("contrasts.txt", "w")
+    outFileText = open(Path(dir).joinpath("contrasts.txt"), "w")
     outFileMDDict = {}
     
     #makes a dictionary for the contrasts of each theme
@@ -222,7 +231,7 @@ def main():
         bg = themes[themeName]
         allThemeContrasts[themeName] = contrasts[bg].large
         fileThemeName = themeName.replace("/","_")
-        s = "palette-contrasts-" + fileThemeName + ".md"
+        s = Path(dir).joinpath("palette-contrasts-" + fileThemeName + ".md")
         f = open(s, "w")
         outFileMDDict[themeName] = f
 
