@@ -144,7 +144,28 @@ def makeTextFile(contrasts, bg1, bg2, theme, outFile,small, sub=False):
     
     #write final line
     outFile.write("end\n\n")
+
+#writes to a markdown file that lists out the color information in text form
+def makeMDFile(contrasts, bg1, bg2, theme, outFile,small, sub=False):
+    c = contrasts[bg1]
+
     
+    if sub:
+        outFile.write("## UI component color: "  + contrasts[bg1].name + " (" + contrasts[bg1].hex + ")\n")
+    else:
+        outFile.write("# Theme: "  + theme + "\n\n")
+        outFile.write("## UI or large text colors: \n")
+
+    if small:
+        colorList = c.small
+    else:
+        colorList = c.large
+
+    for s in colorList:
+        outFile.write( "* " + s[1] + " (" + str(s[0]) + ")" + str(s[2]) +  " contrast: " + str(s[3])+ "\n")
+
+    outFile.write("\n")
+
 #main function reads in palette file, creates data structure of contrasts, outputs to a file
 #assumes an input file of scss variables where hex codes are indicated with a # and variables are indicated with a $
 def main():
@@ -190,7 +211,8 @@ def main():
 
     #opens an output file
     outFileText = open("contrasts.txt", "w")
-
+    outFileMDLight = open("pallete_contrasts_light.md", "w")
+    outFileMDDark = open("pallete_contrasts_dark.md", "w")
     #breaks contrast into two lists for light and dark bg contrasts
     lightContrasts = []
     for c in contrasts[lightbg].large:
@@ -207,10 +229,13 @@ def main():
     #add all the sub-palette contrasts to the output file
     for subColor in contrasts.keys():
         if subColor in lightContrasts:
-            makeTextFile(contrasts,subColor,lightbg, "light", outFileText, False, True)     
+            makeTextFile(contrasts,subColor,lightbg, "light", outFileText, False, True)
+            makeMDFile(contrasts,subColor,lightbg, "light", outFileMDLight, False, True)     
 
         if subColor in darkContrasts:
             makeTextFile(contrasts,subColor,darkbg, "dark/contrast", outFileText, False, True)     
+            makeMDFile(contrasts,subColor,darkbg, "dark/contrast", outFileMDDark, False, True)     
+
 
 
 #define a contrast set class   
