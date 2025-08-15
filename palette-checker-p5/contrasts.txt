@@ -1,4 +1,5 @@
 start light lighter #FBFBFB 251 251 251 
+<<<<<<< HEAD
 darker #1C1C1C 28 28 28 16.5:1
 dark #333333 51 51 51 12.2:1
 medium-dark #4D4D4D 77 77 77 8.2:1
@@ -24,10 +25,52 @@ light #F0F0F0 240 240 240 15.0:1
 medium-light #D9D9D9 217 217 217 12.1:1
 middle-light #A6A6A6 166 166 166 7.0:1
 dodgerblue #1E90FF 30 144 255 5.3:1
+=======
+admonition-background #000000 0 0 0 20.3:1
+darker #1C1C1C 28 28 28 16.5:1
+dark #333333 51 51 51 12.2:1
+medium-dark #4D4D4D 77 77 77 8.2:1
+admonition-text #075769 7 87 105 7.9:1
+admonition-background #105A7F 16 90 127 7.3:1
+hint-keyword-text-color #7A5A3A 122 90 58 6.1:1
+middle-dark #666666 102 102 102 5.5:1
+console-active-arrow-color #0071AD 0 113 173 5.1:1
+middle-gray #747474 116 116 116 4.5:1
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 4.5:1
+hint-var-active-border-bottom-color #D52889 213 40 137 4.5:1
+console-active-arrow-color #097BB3 9 123 179 4.5:1
+p5js-active-pink #F10046 241 0 70 4.2:1
+p5js-pink #ED225D 237 34 93 4.1:1
+middle-gray #7D7D7D 125 125 125 4.0:1
+hint-var-active-border-bottom-color #DE4A9B 222 74 155 3.7:1
+hint-keyword-text-color #B58318 181 131 24 3.3:1
+dodgerblue #1E90FF 30 144 255 3.1:1
+end
+
+start dark darker #1C1C1C 28 28 28 
+admonition-text #FFFFFF 255 255 255 17.0:1
+lighter #FBFBFB 251 251 251 16.5:1
+admonition-background #E4F8FF 228 248 255 15.6:1
+hint-item-hover-background-color #F4F4F4 244 244 244 15.5:1
+light #F0F0F0 240 240 240 15.0:1
+hint-fun-text-color #00FFFF 0 255 255 13.6:1
+hint-arrow-background-active-color #F5DC23 245 220 35 12.3:1
+medium-light #D9D9D9 217 217 217 12.1:1
+hint-inline-text-color #CFCFCF 207 207 207 10.9:1
+hint-var-text-color #FFA9D9 255 169 217 9.7:1
+admonition-border #22C8ED 34 200 237 8.6:1
+middle-light #A6A6A6 166 166 166 7.0:1
+table-button-background-active-color #00A1D3 0 161 211 5.7:1
+hint-fun-active-border-bottom-color #0F9DD7 15 157 215 5.5:1
+dodgerblue #1E90FF 30 144 255 5.3:1
+hint-keyword-text-color #B58318 181 131 24 5.1:1
+hint-var-active-border-bottom-color #DE4A9B 222 74 155 4.5:1
+>>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
 middle-gray #7D7D7D 125 125 125 4.1:1
 p5js-pink #ED225D 237 34 93 4.0:1
 p5js-active-pink #F10046 241 0 70 3.9:1
 middle-gray #747474 116 116 116 3.6:1
+<<<<<<< HEAD
 hint-fun-active-border-bottom-color-(light) #0B7CA9 11 124 169 3.6:1
 hint-var-active-border-bottom-color-(light) #D52889 213 40 137 3.6:1
 console-active-arrow-color-(light) #0071AD 0 113 173 3.2:1
@@ -121,38 +164,333 @@ hint-item-hover-background-color-(light) #F4F4F4 244 244 244 4.2:1
 light #F0F0F0 240 240 240 4.1:1
 darker #1C1C1C 28 28 28 3.6:1
 medium-light #D9D9D9 217 217 217 3.3:1
+=======
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 3.6:1
+hint-var-active-border-bottom-color #D52889 213 40 137 3.6:1
+console-active-arrow-color #097BB3 9 123 179 3.6:1
+console-active-arrow-color #0071AD 0 113 173 3.2:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+p5js-pink #ED225D 237 34 93 4.1:1
+admonition-background #000000 0 0 0 5.0:1
+admonition-text #FFFFFF 255 255 255 4.2:1
+lighter #FBFBFB 251 251 251 4.1:1
+darker #1C1C1C 28 28 28 4.0:1
+hint-item-hover-background-color #F4F4F4 244 244 244 3.8:1
+admonition-background #E4F8FF 228 248 255 3.8:1
+light #F0F0F0 240 240 240 3.7:1
+hint-fun-text-color #00FFFF 0 255 255 3.4:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+p5js-pink #ED225D 237 34 93 4.0:1
+admonition-background #000000 0 0 0 5.0:1
+admonition-text #FFFFFF 255 255 255 4.2:1
+lighter #FBFBFB 251 251 251 4.1:1
+darker #1C1C1C 28 28 28 4.0:1
+hint-item-hover-background-color #F4F4F4 244 244 244 3.8:1
+admonition-background #E4F8FF 228 248 255 3.8:1
+light #F0F0F0 240 240 240 3.7:1
+hint-fun-text-color #00FFFF 0 255 255 3.4:1
+>>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
 end
 
 start light lighter #FBFBFB 251 251 251 sub
 p5js-active-pink #F10046 241 0 70 4.2:1
+<<<<<<< HEAD
 lighter #FBFBFB 251 251 251 4.2:1
 hint-item-hover-background-color-(light) #F4F4F4 244 244 244 4.0:1
 admonition-background-(light) #E4F8FF 228 248 255 4.0:1
 darker #1C1C1C 28 28 28 3.9:1
 light #F0F0F0 240 240 240 3.8:1
+=======
+admonition-background #000000 0 0 0 4.8:1
+admonition-text #FFFFFF 255 255 255 4.3:1
+lighter #FBFBFB 251 251 251 4.2:1
+hint-item-hover-background-color #F4F4F4 244 244 244 4.0:1
+admonition-background #E4F8FF 228 248 255 4.0:1
+darker #1C1C1C 28 28 28 3.9:1
+light #F0F0F0 240 240 240 3.8:1
+hint-fun-text-color #00FFFF 0 255 255 3.5:1
+hint-arrow-background-active-color #F5DC23 245 220 35 3.1:1
+medium-light #D9D9D9 217 217 217 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+p5js-active-pink #F10046 241 0 70 3.9:1
+admonition-background #000000 0 0 0 4.8:1
+admonition-text #FFFFFF 255 255 255 4.3:1
+lighter #FBFBFB 251 251 251 4.2:1
+hint-item-hover-background-color #F4F4F4 244 244 244 4.0:1
+admonition-background #E4F8FF 228 248 255 4.0:1
+darker #1C1C1C 28 28 28 3.9:1
+light #F0F0F0 240 240 240 3.8:1
+hint-fun-text-color #00FFFF 0 255 255 3.5:1
+hint-arrow-background-active-color #F5DC23 245 220 35 3.1:1
+>>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
 medium-light #D9D9D9 217 217 217 3.1:1
 end
 
 start light lighter #FBFBFB 251 251 251 sub
+<<<<<<< HEAD
 p5js-pink #ED225D 237 34 93 4.1:1
 lighter #FBFBFB 251 251 251 4.1:1
 darker #1C1C1C 28 28 28 4.0:1
 hint-item-hover-background-color-(light) #F4F4F4 244 244 244 3.8:1
 admonition-background-(light) #E4F8FF 228 248 255 3.8:1
 light #F0F0F0 240 240 240 3.7:1
+=======
+admonition-text #075769 7 87 105 7.9:1
+admonition-text #FFFFFF 255 255 255 8.2:1
+lighter #FBFBFB 251 251 251 7.9:1
+hint-item-hover-background-color #F4F4F4 244 244 244 7.4:1
+admonition-background #E4F8FF 228 248 255 7.4:1
+light #F0F0F0 240 240 240 7.2:1
+hint-fun-text-color #00FFFF 0 255 255 6.5:1
+hint-arrow-background-active-color #F5DC23 245 220 35 5.9:1
+medium-light #D9D9D9 217 217 217 5.8:1
+hint-inline-text-color #CFCFCF 207 207 207 5.2:1
+hint-var-text-color #FFA9D9 255 169 217 4.6:1
+admonition-border #22C8ED 34 200 237 4.1:1
+middle-light #A6A6A6 166 166 166 3.3:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+admonition-text #075769 7 87 105 17.0:1
+admonition-text #FFFFFF 255 255 255 8.2:1
+lighter #FBFBFB 251 251 251 7.9:1
+hint-item-hover-background-color #F4F4F4 244 244 244 7.4:1
+admonition-background #E4F8FF 228 248 255 7.4:1
+light #F0F0F0 240 240 240 7.2:1
+hint-fun-text-color #00FFFF 0 255 255 6.5:1
+hint-arrow-background-active-color #F5DC23 245 220 35 5.9:1
+medium-light #D9D9D9 217 217 217 5.8:1
+hint-inline-text-color #CFCFCF 207 207 207 5.2:1
+hint-var-text-color #FFA9D9 255 169 217 4.6:1
+admonition-border #22C8ED 34 200 237 4.1:1
+middle-light #A6A6A6 166 166 166 3.3:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+admonition-background #105A7F 16 90 127 7.3:1
+admonition-text #FFFFFF 255 255 255 7.5:1
+lighter #FBFBFB 251 251 251 7.3:1
+admonition-background #E4F8FF 228 248 255 6.9:1
+hint-item-hover-background-color #F4F4F4 244 244 244 6.8:1
+light #F0F0F0 240 240 240 6.6:1
+hint-fun-text-color #00FFFF 0 255 255 6.0:1
+hint-arrow-background-active-color #F5DC23 245 220 35 5.4:1
+medium-light #D9D9D9 217 217 217 5.3:1
+hint-inline-text-color #CFCFCF 207 207 207 4.8:1
+hint-var-text-color #FFA9D9 255 169 217 4.3:1
+admonition-border #22C8ED 34 200 237 3.8:1
+middle-light #A6A6A6 166 166 166 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+admonition-background #105A7F 16 90 127 15.6:1
+admonition-text #FFFFFF 255 255 255 7.5:1
+lighter #FBFBFB 251 251 251 7.3:1
+admonition-background #E4F8FF 228 248 255 6.9:1
+hint-item-hover-background-color #F4F4F4 244 244 244 6.8:1
+light #F0F0F0 240 240 240 6.6:1
+hint-fun-text-color #00FFFF 0 255 255 6.0:1
+hint-arrow-background-active-color #F5DC23 245 220 35 5.4:1
+medium-light #D9D9D9 217 217 217 5.3:1
+hint-inline-text-color #CFCFCF 207 207 207 4.8:1
+hint-var-text-color #FFA9D9 255 169 217 4.3:1
+admonition-border #22C8ED 34 200 237 3.8:1
+middle-light #A6A6A6 166 166 166 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+hint-arrow-background-active-color #F5DC23 245 220 35 12.3:1
+admonition-background #000000 0 0 0 15.1:1
+darker #1C1C1C 28 28 28 12.3:1
+dark #333333 51 51 51 9.1:1
+medium-dark #4D4D4D 77 77 77 6.1:1
+admonition-text #075769 7 87 105 5.9:1
+admonition-background #105A7F 16 90 127 5.4:1
+hint-keyword-text-color #7A5A3A 122 90 58 4.5:1
+middle-dark #666666 102 102 102 4.1:1
+console-active-arrow-color #0071AD 0 113 173 3.8:1
+middle-gray #747474 116 116 116 3.4:1
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 3.4:1
+hint-var-active-border-bottom-color #D52889 213 40 137 3.4:1
+console-active-arrow-color #097BB3 9 123 179 3.4:1
+p5js-active-pink #F10046 241 0 70 3.1:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+dodgerblue #1E90FF 30 144 255 3.1:1
+admonition-background #000000 0 0 0 6.5:1
+darker #1C1C1C 28 28 28 5.3:1
+dark #333333 51 51 51 3.9:1
+admonition-text #FFFFFF 255 255 255 3.2:1
+lighter #FBFBFB 251 251 251 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+dodgerblue #1E90FF 30 144 255 5.3:1
+admonition-background #000000 0 0 0 6.5:1
+darker #1C1C1C 28 28 28 5.3:1
+dark #333333 51 51 51 3.9:1
+admonition-text #FFFFFF 255 255 255 3.2:1
+lighter #FBFBFB 251 251 251 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+hint-var-text-color #FFA9D9 255 169 217 9.7:1
+admonition-background #000000 0 0 0 11.9:1
+darker #1C1C1C 28 28 28 9.7:1
+dark #333333 51 51 51 7.2:1
+medium-dark #4D4D4D 77 77 77 4.8:1
+admonition-text #075769 7 87 105 4.6:1
+admonition-background #105A7F 16 90 127 4.3:1
+hint-keyword-text-color #7A5A3A 122 90 58 3.6:1
+middle-dark #666666 102 102 102 3.3:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 4.5:1
+admonition-text #FFFFFF 255 255 255 4.7:1
+admonition-background #000000 0 0 0 4.5:1
+lighter #FBFBFB 251 251 251 4.5:1
+hint-item-hover-background-color #F4F4F4 244 244 244 4.3:1
+admonition-background #E4F8FF 228 248 255 4.3:1
+light #F0F0F0 240 240 240 4.1:1
+hint-fun-text-color #00FFFF 0 255 255 3.7:1
+darker #1C1C1C 28 28 28 3.6:1
+hint-arrow-background-active-color #F5DC23 245 220 35 3.4:1
+medium-light #D9D9D9 217 217 217 3.3:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 3.6:1
+admonition-text #FFFFFF 255 255 255 4.7:1
+admonition-background #000000 0 0 0 4.5:1
+lighter #FBFBFB 251 251 251 4.5:1
+hint-item-hover-background-color #F4F4F4 244 244 244 4.3:1
+admonition-background #E4F8FF 228 248 255 4.3:1
+light #F0F0F0 240 240 240 4.1:1
+hint-fun-text-color #00FFFF 0 255 255 3.7:1
+darker #1C1C1C 28 28 28 3.6:1
+hint-arrow-background-active-color #F5DC23 245 220 35 3.4:1
+medium-light #D9D9D9 217 217 217 3.3:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+lighter #FBFBFB 251 251 251 16.5:1
+admonition-background #000000 0 0 0 20.3:1
+darker #1C1C1C 28 28 28 16.5:1
+dark #333333 51 51 51 12.2:1
+medium-dark #4D4D4D 77 77 77 8.2:1
+admonition-text #075769 7 87 105 7.9:1
+admonition-background #105A7F 16 90 127 7.3:1
+hint-keyword-text-color #7A5A3A 122 90 58 6.1:1
+middle-dark #666666 102 102 102 5.5:1
+console-active-arrow-color #0071AD 0 113 173 5.1:1
+middle-gray #747474 116 116 116 4.5:1
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 4.5:1
+hint-var-active-border-bottom-color #D52889 213 40 137 4.5:1
+console-active-arrow-color #097BB3 9 123 179 4.5:1
+p5js-active-pink #F10046 241 0 70 4.2:1
+p5js-pink #ED225D 237 34 93 4.1:1
+middle-gray #7D7D7D 125 125 125 4.0:1
+hint-var-active-border-bottom-color #DE4A9B 222 74 155 3.7:1
+hint-keyword-text-color #B58318 181 131 24 3.3:1
+dodgerblue #1E90FF 30 144 255 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+light #F0F0F0 240 240 240 15.0:1
+admonition-background #000000 0 0 0 18.4:1
+darker #1C1C1C 28 28 28 15.0:1
+dark #333333 51 51 51 11.1:1
+medium-dark #4D4D4D 77 77 77 7.4:1
+admonition-text #075769 7 87 105 7.2:1
+admonition-background #105A7F 16 90 127 6.6:1
+hint-keyword-text-color #7A5A3A 122 90 58 5.5:1
+middle-dark #666666 102 102 102 5.0:1
+console-active-arrow-color #0071AD 0 113 173 4.6:1
+middle-gray #747474 116 116 116 4.1:1
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 4.1:1
+hint-var-active-border-bottom-color #D52889 213 40 137 4.1:1
+console-active-arrow-color #097BB3 9 123 179 4.1:1
+p5js-active-pink #F10046 241 0 70 3.8:1
+p5js-pink #ED225D 237 34 93 3.7:1
+middle-gray #7D7D7D 125 125 125 3.6:1
+hint-var-active-border-bottom-color #DE4A9B 222 74 155 3.3:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+medium-light #D9D9D9 217 217 217 12.1:1
+admonition-background #000000 0 0 0 14.9:1
+darker #1C1C1C 28 28 28 12.1:1
+dark #333333 51 51 51 9.0:1
+medium-dark #4D4D4D 77 77 77 6.0:1
+admonition-text #075769 7 87 105 5.8:1
+admonition-background #105A7F 16 90 127 5.3:1
+hint-keyword-text-color #7A5A3A 122 90 58 4.4:1
+middle-dark #666666 102 102 102 4.1:1
+console-active-arrow-color #0071AD 0 113 173 3.8:1
+middle-gray #747474 116 116 116 3.3:1
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 3.3:1
+hint-var-active-border-bottom-color #D52889 213 40 137 3.3:1
+console-active-arrow-color #097BB3 9 123 179 3.3:1
+p5js-active-pink #F10046 241 0 70 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+middle-light #A6A6A6 166 166 166 7.0:1
+admonition-background #000000 0 0 0 8.6:1
+darker #1C1C1C 28 28 28 7.0:1
+dark #333333 51 51 51 5.2:1
+medium-dark #4D4D4D 77 77 77 3.5:1
+admonition-text #075769 7 87 105 3.3:1
+admonition-background #105A7F 16 90 127 3.1:1
+>>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
 end
 
 start light lighter #FBFBFB 251 251 251 sub
 middle-gray #747474 116 116 116 4.0:1
+<<<<<<< HEAD
 lighter #FBFBFB 251 251 251 4.5:1
 admonition-background-(light) #E4F8FF 228 248 255 4.3:1
 hint-item-hover-background-color-(light) #F4F4F4 244 244 244 4.2:1
 light #F0F0F0 240 240 240 4.1:1
 darker #1C1C1C 28 28 28 3.6:1
+=======
+admonition-text #FFFFFF 255 255 255 4.7:1
+admonition-background #000000 0 0 0 4.5:1
+lighter #FBFBFB 251 251 251 4.5:1
+admonition-background #E4F8FF 228 248 255 4.3:1
+hint-item-hover-background-color #F4F4F4 244 244 244 4.2:1
+light #F0F0F0 240 240 240 4.1:1
+hint-fun-text-color #00FFFF 0 255 255 3.7:1
+darker #1C1C1C 28 28 28 3.6:1
+hint-arrow-background-active-color #F5DC23 245 220 35 3.4:1
+medium-light #D9D9D9 217 217 217 3.3:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+middle-gray #747474 116 116 116 3.6:1
+admonition-text #FFFFFF 255 255 255 4.7:1
+admonition-background #000000 0 0 0 4.5:1
+lighter #FBFBFB 251 251 251 4.5:1
+admonition-background #E4F8FF 228 248 255 4.3:1
+hint-item-hover-background-color #F4F4F4 244 244 244 4.2:1
+light #F0F0F0 240 240 240 4.1:1
+hint-fun-text-color #00FFFF 0 255 255 3.7:1
+darker #1C1C1C 28 28 28 3.6:1
+hint-arrow-background-active-color #F5DC23 245 220 35 3.4:1
+>>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
 medium-light #D9D9D9 217 217 217 3.3:1
 end
 
 start light lighter #FBFBFB 251 251 251 sub
+<<<<<<< HEAD
 dodgerblue #1E90FF 30 144 255 3.1:1
 darker #1C1C1C 28 28 28 5.3:1
 dark #333333 51 51 51 3.9:1
@@ -175,10 +513,84 @@ hint-fun-active-border-bottom-color-(dark) #0F9DD7 15 157 215 5.5:1
 dodgerblue #1E90FF 30 144 255 5.3:1
 hint-keyword-text-color-(dark) #B58318 181 131 24 5.1:1
 hint-var-active-border-bottom-color-(dark) #DE4A9B 222 74 155 4.5:1
+=======
+middle-dark #666666 102 102 102 5.5:1
+admonition-text #FFFFFF 255 255 255 5.7:1
+lighter #FBFBFB 251 251 251 5.5:1
+hint-item-hover-background-color #F4F4F4 244 244 244 5.2:1
+admonition-background #E4F8FF 228 248 255 5.2:1
+light #F0F0F0 240 240 240 5.0:1
+hint-fun-text-color #00FFFF 0 255 255 4.6:1
+hint-arrow-background-active-color #F5DC23 245 220 35 4.1:1
+medium-light #D9D9D9 217 217 217 4.1:1
+admonition-background #000000 0 0 0 3.7:1
+hint-inline-text-color #CFCFCF 207 207 207 3.7:1
+hint-var-text-color #FFA9D9 255 169 217 3.3:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+medium-dark #4D4D4D 77 77 77 8.2:1
+admonition-text #FFFFFF 255 255 255 8.5:1
+lighter #FBFBFB 251 251 251 8.2:1
+hint-item-hover-background-color #F4F4F4 244 244 244 7.7:1
+admonition-background #E4F8FF 228 248 255 7.7:1
+light #F0F0F0 240 240 240 7.4:1
+hint-fun-text-color #00FFFF 0 255 255 6.7:1
+hint-arrow-background-active-color #F5DC23 245 220 35 6.1:1
+medium-light #D9D9D9 217 217 217 6.0:1
+hint-inline-text-color #CFCFCF 207 207 207 5.4:1
+hint-var-text-color #FFA9D9 255 169 217 4.8:1
+admonition-border #22C8ED 34 200 237 4.2:1
+middle-light #A6A6A6 166 166 166 3.5:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+dark #333333 51 51 51 12.2:1
+admonition-text #FFFFFF 255 255 255 12.6:1
+lighter #FBFBFB 251 251 251 12.2:1
+hint-item-hover-background-color #F4F4F4 244 244 244 11.5:1
+admonition-background #E4F8FF 228 248 255 11.5:1
+light #F0F0F0 240 240 240 11.1:1
+hint-fun-text-color #00FFFF 0 255 255 10.1:1
+hint-arrow-background-active-color #F5DC23 245 220 35 9.1:1
+medium-light #D9D9D9 217 217 217 9.0:1
+hint-inline-text-color #CFCFCF 207 207 207 8.1:1
+hint-var-text-color #FFA9D9 255 169 217 7.2:1
+admonition-border #22C8ED 34 200 237 6.3:1
+middle-light #A6A6A6 166 166 166 5.2:1
+table-button-background-active-color #00A1D3 0 161 211 4.2:1
+hint-fun-active-border-bottom-color #0F9DD7 15 157 215 4.1:1
+dodgerblue #1E90FF 30 144 255 3.9:1
+hint-keyword-text-color #B58318 181 131 24 3.7:1
+hint-var-active-border-bottom-color #DE4A9B 222 74 155 3.3:1
+middle-gray #7D7D7D 125 125 125 3.1:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+darker #1C1C1C 28 28 28 16.5:1
+admonition-text #FFFFFF 255 255 255 17.0:1
+lighter #FBFBFB 251 251 251 16.5:1
+admonition-background #E4F8FF 228 248 255 15.6:1
+hint-item-hover-background-color #F4F4F4 244 244 244 15.5:1
+light #F0F0F0 240 240 240 15.0:1
+hint-fun-text-color #00FFFF 0 255 255 13.6:1
+hint-arrow-background-active-color #F5DC23 245 220 35 12.3:1
+medium-light #D9D9D9 217 217 217 12.1:1
+hint-inline-text-color #CFCFCF 207 207 207 10.9:1
+hint-var-text-color #FFA9D9 255 169 217 9.7:1
+admonition-border #22C8ED 34 200 237 8.6:1
+middle-light #A6A6A6 166 166 166 7.0:1
+table-button-background-active-color #00A1D3 0 161 211 5.7:1
+hint-fun-active-border-bottom-color #0F9DD7 15 157 215 5.5:1
+dodgerblue #1E90FF 30 144 255 5.3:1
+hint-keyword-text-color #B58318 181 131 24 5.1:1
+hint-var-active-border-bottom-color #DE4A9B 222 74 155 4.5:1
+>>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
 middle-gray #7D7D7D 125 125 125 4.1:1
 p5js-pink #ED225D 237 34 93 4.0:1
 p5js-active-pink #F10046 241 0 70 3.9:1
 middle-gray #747474 116 116 116 3.6:1
+<<<<<<< HEAD
 console-active-arrow-color-(dark) #097BB3 9 123 179 3.6:1
 end
 
@@ -245,11 +657,162 @@ admonition-background-(dark) #105A7F 16 90 127 6.0:1
 middle-dark #666666 102 102 102 4.6:1
 middle-gray #747474 116 116 116 3.7:1
 console-active-arrow-color-(dark) #097BB3 9 123 179 3.7:1
+=======
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 3.6:1
+hint-var-active-border-bottom-color #D52889 213 40 137 3.6:1
+console-active-arrow-color #097BB3 9 123 179 3.6:1
+console-active-arrow-color #0071AD 0 113 173 3.2:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+console-active-arrow-color #097BB3 9 123 179 4.5:1
+admonition-text #FFFFFF 255 255 255 4.7:1
+admonition-background #000000 0 0 0 4.5:1
+lighter #FBFBFB 251 251 251 4.5:1
+admonition-background #E4F8FF 228 248 255 4.3:1
+hint-item-hover-background-color #F4F4F4 244 244 244 4.2:1
+light #F0F0F0 240 240 240 4.1:1
+hint-fun-text-color #00FFFF 0 255 255 3.7:1
+darker #1C1C1C 28 28 28 3.6:1
+hint-arrow-background-active-color #F5DC23 245 220 35 3.4:1
+medium-light #D9D9D9 217 217 217 3.3:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+console-active-arrow-color #097BB3 9 123 179 3.2:1
+admonition-text #FFFFFF 255 255 255 4.7:1
+admonition-background #000000 0 0 0 4.5:1
+lighter #FBFBFB 251 251 251 4.5:1
+admonition-background #E4F8FF 228 248 255 4.3:1
+hint-item-hover-background-color #F4F4F4 244 244 244 4.2:1
+light #F0F0F0 240 240 240 4.1:1
+hint-fun-text-color #00FFFF 0 255 255 3.7:1
+darker #1C1C1C 28 28 28 3.6:1
+hint-arrow-background-active-color #F5DC23 245 220 35 3.4:1
+medium-light #D9D9D9 217 217 217 3.3:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+table-button-background-active-color #00A1D3 0 161 211 5.7:1
+admonition-background #000000 0 0 0 7.0:1
+darker #1C1C1C 28 28 28 5.7:1
+dark #333333 51 51 51 4.2:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+hint-var-active-border-bottom-color #DE4A9B 222 74 155 3.7:1
+admonition-background #000000 0 0 0 5.6:1
+darker #1C1C1C 28 28 28 4.5:1
+admonition-text #FFFFFF 255 255 255 3.8:1
+lighter #FBFBFB 251 251 251 3.7:1
+hint-item-hover-background-color #F4F4F4 244 244 244 3.4:1
+admonition-background #E4F8FF 228 248 255 3.4:1
+light #F0F0F0 240 240 240 3.3:1
+dark #333333 51 51 51 3.3:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+hint-var-active-border-bottom-color #DE4A9B 222 74 155 3.6:1
+admonition-background #000000 0 0 0 5.6:1
+darker #1C1C1C 28 28 28 4.5:1
+admonition-text #FFFFFF 255 255 255 3.8:1
+lighter #FBFBFB 251 251 251 3.7:1
+hint-item-hover-background-color #F4F4F4 244 244 244 3.4:1
+admonition-background #E4F8FF 228 248 255 3.4:1
+light #F0F0F0 240 240 240 3.3:1
+dark #333333 51 51 51 3.3:1
+end
+
+start light lighter #FBFBFB 251 251 251 sub
+hint-keyword-text-color #B58318 181 131 24 3.3:1
+admonition-background #000000 0 0 0 6.2:1
+darker #1C1C1C 28 28 28 5.1:1
+dark #333333 51 51 51 3.7:1
+admonition-text #FFFFFF 255 255 255 3.4:1
+lighter #FBFBFB 251 251 251 3.3:1
+hint-item-hover-background-color #F4F4F4 244 244 244 3.1:1
+admonition-background #E4F8FF 228 248 255 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+hint-keyword-text-color #B58318 181 131 24 5.1:1
+admonition-background #000000 0 0 0 6.2:1
+darker #1C1C1C 28 28 28 5.1:1
+dark #333333 51 51 51 3.7:1
+admonition-text #FFFFFF 255 255 255 3.4:1
+lighter #FBFBFB 251 251 251 3.3:1
+hint-item-hover-background-color #F4F4F4 244 244 244 3.1:1
+admonition-background #E4F8FF 228 248 255 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+hint-item-hover-background-color #F4F4F4 244 244 244 15.5:1
+admonition-background #000000 0 0 0 19.1:1
+darker #1C1C1C 28 28 28 15.5:1
+dark #333333 51 51 51 11.5:1
+medium-dark #4D4D4D 77 77 77 7.7:1
+admonition-text #075769 7 87 105 7.4:1
+admonition-background #105A7F 16 90 127 6.8:1
+hint-keyword-text-color #7A5A3A 122 90 58 5.7:1
+middle-dark #666666 102 102 102 5.2:1
+console-active-arrow-color #0071AD 0 113 173 4.8:1
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 4.3:1
+middle-gray #747474 116 116 116 4.2:1
+hint-var-active-border-bottom-color #D52889 213 40 137 4.2:1
+console-active-arrow-color #097BB3 9 123 179 4.2:1
+p5js-active-pink #F10046 241 0 70 4.0:1
+p5js-pink #ED225D 237 34 93 3.8:1
+middle-gray #7D7D7D 125 125 125 3.7:1
+hint-var-active-border-bottom-color #DE4A9B 222 74 155 3.4:1
+hint-keyword-text-color #B58318 181 131 24 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+admonition-border #22C8ED 34 200 237 8.6:1
+admonition-background #000000 0 0 0 10.6:1
+darker #1C1C1C 28 28 28 8.6:1
+dark #333333 51 51 51 6.3:1
+medium-dark #4D4D4D 77 77 77 4.2:1
+admonition-text #075769 7 87 105 4.1:1
+admonition-background #105A7F 16 90 127 3.8:1
+hint-keyword-text-color #7A5A3A 122 90 58 3.1:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+hint-inline-text-color #CFCFCF 207 207 207 10.9:1
+admonition-background #000000 0 0 0 13.5:1
+darker #1C1C1C 28 28 28 10.9:1
+dark #333333 51 51 51 8.1:1
+medium-dark #4D4D4D 77 77 77 5.4:1
+admonition-text #075769 7 87 105 5.2:1
+admonition-background #105A7F 16 90 127 4.8:1
+hint-keyword-text-color #7A5A3A 122 90 58 4.0:1
+middle-dark #666666 102 102 102 3.7:1
+console-active-arrow-color #0071AD 0 113 173 3.4:1
+end
+
+start dark/contrast darker #1C1C1C 28 28 28 sub
+hint-fun-text-color #00FFFF 0 255 255 13.6:1
+admonition-background #000000 0 0 0 16.7:1
+darker #1C1C1C 28 28 28 13.6:1
+dark #333333 51 51 51 10.1:1
+medium-dark #4D4D4D 77 77 77 6.7:1
+admonition-text #075769 7 87 105 6.5:1
+admonition-background #105A7F 16 90 127 6.0:1
+hint-keyword-text-color #7A5A3A 122 90 58 5.0:1
+middle-dark #666666 102 102 102 4.6:1
+console-active-arrow-color #0071AD 0 113 173 4.2:1
+middle-gray #747474 116 116 116 3.7:1
+hint-fun-active-border-bottom-color #0B7CA9 11 124 169 3.7:1
+hint-var-active-border-bottom-color #D52889 213 40 137 3.7:1
+console-active-arrow-color #097BB3 9 123 179 3.7:1
+>>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
 p5js-active-pink #F10046 241 0 70 3.5:1
 p5js-pink #ED225D 237 34 93 3.4:1
 middle-gray #7D7D7D 125 125 125 3.3:1
 end
 
+<<<<<<< HEAD
 start dark-contrast darker #1C1C1C 28 28 28 sub
 hint-arrow-background-active-color-(contrast) #F5DC23 245 220 35 12.3:1
 admonition-background-(contrast) #000000 0 0 0 15.1:1
@@ -415,3 +978,5 @@ hint-arrow-background-active-color-(contrast) #F5DC23 245 220 35 3.4:1
 medium-light #D9D9D9 217 217 217 3.3:1
 end
 
+=======
+>>>>>>> fcba75f77d7c9c0a1a1beda4b706ea6442a18511
